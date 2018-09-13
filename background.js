@@ -1,22 +1,7 @@
-chrome.browserAction.onClicked.addListener(function (tab) {   //listens for when the icon for the extension is clicked
-	chrome.tabs.executeScript({     //injects the "inject.js" file and runs it
+//listens for when the icon for the extension is clicked
+chrome.browserAction.onClicked.addListener(function (tab) {
+	 //injects the "inject.js" file and runs it
+	chrome.tabs.executeScript({
 		file: 'inject.js'
 	});
-
-	{ //sends message to script "inject.js"
-		chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-		chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
-		});
-	  });
-	};
-
-/* looks for saved favorite file type and pastes it to a popup window
-	chrome.storage.sync.get({
-		favoriteType: 'jpg',
-	}, function(items) {
-		var fileType = items.favoriteType;
-		window.alert('File is ' + fileType);
-	});
-	*/
-
 });
