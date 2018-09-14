@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head><title>My Test Extension Options</title></head>
+<head><title>Choose file type to grab</title></head>
 <body>
 
+<!--Shows a dropdown menu of diffrent file types to chose from-->
 File type:
 <select id="file">
  <option value="jpg">jpg</option>
@@ -11,14 +12,11 @@ File type:
  <option value="svg">svg</option>
 </select>
 
-<label>
-  <input type="checkbox" id="like">
-  I like colors.
-</label>
-
+<!--Shows a save button-->
 <div id="status"></div>
 <button id="save">Save</button>
 
+<!--runs "options.js" when button is pressed-->
 <script src="options.js"></script>
 </body>
 </html>
