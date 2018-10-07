@@ -35,10 +35,10 @@ var fileType = items.favoriteType;
     case "gif":
     //repeats the code in brackets for the same amout of time as there are urls in the variable "gifs"
     for (url in gifs) {
-        //logs all links that end in .gif to the chrome console
-        console.log ( gifs[url].href );
-        //adds all liks that end in .gif to the array "urllist"
-        urllist[urllist.length] = gifs[url].href;}
+    //logs all links that end in .gif to the chrome console
+    console.log ( gifs[url].href );
+    //adds all liks that end in .gif to the array "urllist"
+    urllist[urllist.length] = gifs[url].href;}
     console.log('file is gif')
     break;
 
